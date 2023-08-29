@@ -2,6 +2,7 @@
 
 import { Destination } from '@/types/api'
 import { useEffect, useMemo, useState } from 'react'
+import Planet from '../Planet/Planet'
 
 interface PlanetSliderProps {
   destinations: Destination[]
@@ -25,21 +26,23 @@ const PlanetSlider = ({ destinations }: PlanetSliderProps) => {
     return targetDestination
   }, [destination, destinations])
 
-  if (destinationData === null) return null
+  if (destinationData === null || destinationData === undefined) return null
 
   return (
     <div>
-      <nav>
-        <ul>
-          {destinations.map((dest) => (
-            <li key={dest.name}>
-              <button type="button" onClick={() => setDestination(dest.name)}>
-                {dest.name}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <Planet data={destinationData}>
+        <nav>
+          <ul>
+            {destinations.map((dest) => (
+              <li key={dest.name}>
+                <button type="button" onClick={() => setDestination(dest.name)}>
+                  {dest.name}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </Planet>
     </div>
   )
 }

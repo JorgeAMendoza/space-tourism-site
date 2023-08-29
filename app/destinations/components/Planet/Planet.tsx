@@ -2,30 +2,29 @@ import Image from 'next/image'
 import { ReactNode } from 'react'
 import { Destination } from '@/types/api'
 
-type PlanetProps = Destination & { children: ReactNode }
+type PlanetProps = {
+  data: Destination,
+  children: ReactNode
+}
 
 const Planet = ({
-  name,
-  description,
-  images,
-  distance,
-  travel,
+  data,
   children,
 }: PlanetProps) => {
   return (
     <div>
       {children}
       <Image
-        src={images.webp}
+        src={data.images.webp}
         width={445}
         height={445}
-        alt={`image of the destination ${name}`}
+        alt={`image of the destination ${data.name}`}
       />
-      <h2>{name}</h2>
-      <p>{description}</p>
+      <h2>{data.name}</h2>
+      <p>{data.description}</p>
       <div>
-        <p>{distance}</p>
-        <p>{travel}</p>
+        <p>{data.distance}</p>
+        <p>{data.travel}</p>
       </div>
     </div>
   )
