@@ -18,3 +18,12 @@ export interface CrewMember {
   role: string
   bio: string
 }
+
+export interface Technology {
+  name: string;
+  images: {
+    portrait: string;
+    landscape: string;
+  }
+  description: string;
+}
