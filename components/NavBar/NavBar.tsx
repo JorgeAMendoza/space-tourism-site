@@ -6,12 +6,14 @@ import menuIcon from '@/public/images/icons/icon-hamburger.svg'
 const NavBar = () => {
   return (
     <div>
-      <Image
-        src={logo as string}
-        width={40}
-        height={40}
-        alt="space tourism logo"
-      />
+      <Link href="/" aria-label="link to homepage">
+        <Image
+          src={logo as string}
+          width={40}
+          height={40}
+          alt="space tourism logo"
+        />
+      </Link>
 
       <div>
         <nav>
