@@ -68,6 +68,8 @@ const NavBar = () => {
         type="button"
         aria-controls="nav-menu"
         onClick={() => setShowNav(true)}
+        aria-hidden={showNav ? 'true' : 'false'}
+        className={style.hamburgerMenu}
       >
         <Image src={menuIcon as string} alt="menu icon" />
       </button>
