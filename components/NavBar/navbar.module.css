@@ -2,6 +2,7 @@
   composes: container from '../../styles/utils.module.css';
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 2.3rem;
 }
 
@@ -57,4 +58,30 @@
 
 .navbar nav[aria-hidden='true'] {
   transform: translateX(100%);
+}
+
+@media screen and (min-width: 768px) {
+  .navbar nav {
+    position: relative;
+    height: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    transition: none;
+  }
+
+  .navbar nav button {
+    display: none;
+  }
+
+  .navbar ul {
+    margin-block-start: 0;
+    flex-direction: row;
+  }
+
+  .navbar ul > li a span:first-of-type {
+    display: none;
+  }
 }
