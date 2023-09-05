@@ -6,14 +6,21 @@ import menuIcon from '@/public/images/icons/icon-hamburger.svg'
 import closeIcon from '@/public/images/icons/icon-close.svg'
 import style from './navbar.module.css'
 import { barlowCondensed } from '@/app/font'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import useIsMobile from '@/hooks/useIsMobile'
 
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false)
+  const isMobile = useIsMobile()
 
-  // use effect to set to false when we go to a bigger screen
-
-  // use effect to apply overflow class depending on showNav
+  useEffect(() => {
+    if (isMobile) {
+      setShowNav(false)
+    } else {
+      setShowNav(true)
+      document.body.classList.remove('navActive')
+    }
+  }, [isMobile])
 
   return (
     <div className={style.navbar}>
