@@ -8,10 +8,12 @@ import style from './navbar.module.css'
 import { barlowCondensed } from '@/app/font'
 import { useEffect, useState } from 'react'
 import useIsMobile from '@/hooks/useIsMobile'
+import { usePathname } from 'next/navigation'
 
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false)
   const isMobile = useIsMobile()
+  const pathname = usePathname()
 
   useEffect(() => {
     if (isMobile) {
@@ -30,6 +32,7 @@ const NavBar = () => {
           width={40}
           height={40}
           alt="space tourism logo"
+          className={style.logo}
         />
       </Link>
 
@@ -47,22 +50,22 @@ const NavBar = () => {
           <Image src={closeIcon as string} alt="" />
         </button>
         <ul className={barlowCondensed.className}>
-          <li>
+          <li data-active={pathname === '/'}>
             <Link href="/">
               <span>00</span> <span>Home</span>
             </Link>
           </li>
-          <li>
+          <li data-active={pathname === '/destinations'}>
             <Link href="/destinations">
               <span>01</span> <span>Destination</span>
             </Link>
           </li>
-          <li>
+          <li data-active={pathname === '/crew'}>
             <Link href="/crew">
               <span>02</span> <span>Crew</span>
             </Link>
           </li>
-          <li>
+          <li data-active={pathname === '/technology'}>
             <Link href="technology">
               <span>03</span> <span>Technology</span>
             </Link>
