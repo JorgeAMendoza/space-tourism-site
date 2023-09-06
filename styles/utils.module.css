@@ -3,8 +3,14 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .container {
-    width: min(89%, 110rem);
+    width: min(89%, 150rem);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: min(92.5%, 145rem);
   }
 }

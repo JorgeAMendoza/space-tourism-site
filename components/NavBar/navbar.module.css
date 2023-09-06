@@ -108,7 +108,7 @@
   .navbar ul > li a::before {
     content: '';
     position: absolute;
-    bottom: -3.9rem;
+    bottom: -3.6rem;
     left: 50%;
     transform: translateX(-50%);
     width: 97%;
@@ -129,5 +129,44 @@
   .logo {
     width: 4.8rem;
     height: 4.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar {
+    padding-top: 6.2rem;
+  }
+
+  .navbar nav::before {
+    width: 90rem;
+    left: -12.3rem;
+  }
+
+  .navbar nav ul {
+    gap: 0;
+  }
+
+  .navbar nav ul li:not(:first-of-type) {
+    margin-left: 5rem;
+  }
+
+  .navbar nav ul > li a {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .navbar ul > li a span:first-of-type {
+    display: block;
+    width: auto;
+  }
+
+  .navbar nav {
+    transform: translateX(-11rem);
+    margin-block-start: 0.5rem;
+  }
+
+  .navbar ul > li a {
+    font-size: 1.6rem;
+    position: relative;
   }
 }
