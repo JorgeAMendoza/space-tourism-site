@@ -1,10 +1,13 @@
 .navbar {
+  padding: 2.3rem 0 2.3rem 0;
+  overflow: hidden;
+}
+
+.navContainer {
   composes: container from '../../styles/utils.module.css';
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2.3rem;
-  margin-bottom: 3rem;
 }
 
 .hamburgerMenu[aria-hidden='true'] {
@@ -71,22 +74,31 @@
 }
 
 @media screen and (min-width: 768px) {
-  .navbar nav {
-    position: relative;
-    height: auto;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-    transition: none;
+  .hamburgerMenu {
+    display: none;
   }
 
-  .navbar nav::before {
+  .navMenuMobile {
+    display: none;
+  }
+
+  .navMenu {
+    display: block;
+    position: relative;
+    transform: translateX(-0.5rem);
+  }
+
+  .navMenu ul {
+    display: flex;
+    gap: 3.7rem;
+    z-index: 1;
+  }
+
+  .navMenu::before {
     content: '';
     position: absolute;
-    top: -3.5rem;
-    left: -4.7rem;
+    top: -3rem;
+    left: -5.8rem;
     height: 9.6rem;
     width: 45rem;
     -webkit-backdrop-filter: (5px);
@@ -94,40 +106,32 @@
     z-index: 0;
   }
 
-  .navbar nav button {
-    display: none;
-  }
-
-  .navbar ul {
-    margin-block-start: 0;
-    flex-direction: row;
-    gap: 3.5rem;
-    z-index: 1;
-  }
-
-  .navbar ul > li a {
+  .navMenu ul > li a {
     font-size: 1.4rem;
     position: relative;
+    color: var(--light-text);
+    text-transform: uppercase;
+    letter-spacing: 0.236rem;
   }
 
-  .navbar ul > li a::before {
+  .navMenu ul > li a::before {
     content: '';
     position: absolute;
-    bottom: -3.6rem;
+    bottom: -3.8rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 97%;
+    width: 98%;
     background-color: var(--light-text);
     height: 0.3rem;
     z-index: 1;
     display: none;
   }
 
-  .navbar ul > li[data-active='true'] a::before {
+  .navMenu ul > li[data-active='true'] a::before {
     display: block;
   }
 
-  .navbar ul > li a span:first-of-type {
+  .navMenu ul > li a span:first-of-type {
     display: none;
   }
 

@@ -5,7 +5,7 @@
 
 @media screen and (min-width: 768px) {
   .container {
-    width: min(89%, 150rem);
+    width: min(89.5%, 150rem);
   }
 }
 
