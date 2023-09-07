@@ -39,13 +39,14 @@ const NavBar = () => {
       <nav
         aria-label="navigation for space tourism website"
         aria-hidden={showNav ? 'false' : 'true'}
-        id="nav-menu"
+        id="nav-menu-mobile"
+        className={style.navMenuMobile}
       >
         <button
           type="button"
           aria-label="click to close the nav menu"
           onClick={() => setShowNav(false)}
-          aria-controls="nav-menu"
+          aria-controls="nav-menu-mobile"
         >
           <Image src={closeIcon as string} alt="" />
         </button>
@@ -76,7 +77,7 @@ const NavBar = () => {
       <button
         aria-label="click to open the menu"
         type="button"
-        aria-controls="nav-menu"
+        aria-controls="nav-menu-mobile"
         onClick={() => setShowNav(true)}
         aria-hidden={showNav ? 'true' : 'false'}
         className={style.hamburgerMenu}
