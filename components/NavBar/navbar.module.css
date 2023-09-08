@@ -1,5 +1,5 @@
 .navbar {
-  padding: 2.3rem 0 2.3rem 0;
+  padding: 2.6rem 0 2.6rem 0;
   overflow: hidden;
 }
 
@@ -68,7 +68,6 @@
   transform: translateX(100%);
 }
 
-/* regular navbar */
 .navMenu {
   display: none;
 }
@@ -146,27 +145,45 @@
     padding-top: 6.2rem;
   }
 
-  .navbar nav::before {
+  .navMenu::before {
     width: 90rem;
     left: -12.3rem;
+    top: -3.9rem;
+    left: -13.1rem;
   }
 
-  .navbar nav ul {
+  .navMenu::after {
+    content: '';
+    position: absolute;
+    height: 0.1rem;
+    width: min(20rem, 15vw);
+    right: 63.7rem;
+    top: 1rem;
+    background-color: var(--white);
+    z-index: 1;
+  }
+
+  .navMenu ul {
     gap: 0;
   }
 
-  .navbar nav ul li:not(:first-of-type) {
+  .navMenu ul li:not(:first-of-type) {
     margin-left: 5rem;
   }
 
-  .navbar nav ul > li a {
+  .navMenu ul > li a {
     display: flex;
     gap: 1rem;
+    letter-spacing: 0.27rem;
   }
 
-  .navbar ul > li a span:first-of-type {
+  .navMenu ul > li a span:first-of-type {
     display: block;
     width: auto;
+  }
+
+  .navMenu ul > li a::before {
+    bottom: -3.4rem;
   }
 
   .navbar nav {
@@ -177,5 +194,11 @@
   .navbar ul > li a {
     font-size: 1.6rem;
     position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .navMenu::after {
+    width: 47.3rem;
   }
 }
