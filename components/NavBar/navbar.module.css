@@ -1,5 +1,5 @@
 .navbar {
-  padding: 2.6rem 0 2.6rem 0;
+  padding: 2.6rem 0;
   overflow: hidden;
 }
 
@@ -21,9 +21,8 @@
   height: 100vh;
   height: 100dvh;
   width: 25.4rem;
-  background-color: black;
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding: 3.3rem 2.4rem 0rem 3.2rem;
+  padding: 3.3rem 2.4rem 0 3.2rem;
 
   /* styling within the navbar */
   display: flex;
@@ -54,7 +53,6 @@
   letter-spacing: 0.27rem;
   text-transform: uppercase;
   line-height: 19.2px;
-
   display: flex;
   gap: 0.05rem;
 }
@@ -147,7 +145,6 @@
 
   .navMenu::before {
     width: 90rem;
-    left: -12.3rem;
     top: -3.9rem;
     left: -13.1rem;
   }
