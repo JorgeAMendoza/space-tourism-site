@@ -1,0 +1,16 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"],
+
+  "rules": {
+    "selector-class-pattern": "^([a-z][a-zA-Z]*)(-[a-z][a-zA-Z]*)*$|^([a-z][a-zA-Z]*)+$",
+    "selector-id-pattern": "^([a-z][a-zA-Z]*)(-[a-z][a-zA-Z]*)*$|^([a-z][a-zA-Z]*)+$|__next",
+    "media-feature-range-notation": "prefix",
+    "property-no-vendor-prefix": null,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["composes"]
+      }
+    ]
+  }
+}
