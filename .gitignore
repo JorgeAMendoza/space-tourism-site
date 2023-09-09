@@ -19,6 +19,8 @@
 .DS_Store
 *.pem
 /pixel-perfect
+.eslintcache
+.stylelintcache
 
 # debug
 npm-debug.log*
