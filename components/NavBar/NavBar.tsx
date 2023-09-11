@@ -24,6 +24,10 @@ const NavBar = () => {
     }
   }, [isMobile])
 
+  useEffect(() => {
+    setShowNav(false)
+  }, [])
+
   return (
     <div className={style.navbar}>
       <div className={style.navContainer}>
