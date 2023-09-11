@@ -10,7 +10,7 @@ export const barlowCondensed = Barlow_Condensed({
 
 export const bellefair = Bellefair({
   weight: ['400'],
-  subsets: ['latin'],
+  subsets: ['latin-ext'],
   display: 'swap',
 })
 

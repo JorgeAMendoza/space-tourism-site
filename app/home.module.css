@@ -1,0 +1,45 @@
+.home {
+  composes: container from '../styles/utils.module.css';
+  text-align: center;
+  margin-block-start: 2.1rem;
+}
+
+.homeContent h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.27rem;
+}
+
+.homeContent h1 > span {
+  font-size: 8rem;
+  display: block;
+  color: var(--light-text);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 12.5rem;
+}
+
+.homeContent p {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-block-start: 0.6rem;
+  line-height: 2.5rem;
+}
+
+.explore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  margin-top: 7.8rem;
+  background-color: var(--white);
+  color: var(--secondary);
+}

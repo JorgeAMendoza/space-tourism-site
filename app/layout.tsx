@@ -1,7 +1,8 @@
 import NavBar from '@/components/NavBar/NavBar'
-import './globals.css'
 import type { Metadata } from 'next'
 import { barlow } from './font'
+import './globals.css'
+import style from './layout.module.css'
 
 export const metadata: Metadata = {
   title: 'Space Tourism',
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={barlow.className}>
-      <body>
+      <body className={style.layoutBody}>
         <header>
           <NavBar />
         </header>
