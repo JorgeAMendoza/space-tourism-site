@@ -149,17 +149,6 @@
     left: -13.1rem;
   }
 
-  .navMenu::after {
-    content: '';
-    position: absolute;
-    height: 0.1rem;
-    width: min(20rem, 15vw);
-    right: 63.7rem;
-    top: 1rem;
-    background-color: var(--white);
-    z-index: 1;
-  }
-
   .navMenu ul {
     gap: 0;
   }
