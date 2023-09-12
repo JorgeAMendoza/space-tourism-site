@@ -5,26 +5,28 @@
 }
 
 .homeContent h1 {
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 1.5vw + 1rem, 2rem);
   text-transform: uppercase;
   color: var(--primary);
   letter-spacing: 0.27rem;
 }
 
 .homeContent h1 > span {
-  font-size: 8rem;
+  font-size: clamp(8rem, 18.5vw + 1rem, 15rem);
   display: block;
   color: var(--light-text);
   font-weight: 400;
   letter-spacing: normal;
-  line-height: 12.5rem;
+  margin-block-start: 0.2rem;
 }
 
 .homeContent p {
   color: var(--primary);
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2vw + 1rem, 1.6rem);
+  margin: 0 auto;
   margin-block-start: 0.6rem;
   line-height: 2.5rem;
+  width: min(100%, 44.4rem);
 }
 
 .explore {
@@ -34,12 +36,37 @@
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: clamp(2rem, 3vw + 1rem, 3.2rem);
   text-transform: uppercase;
   letter-spacing: 0.125rem;
   line-height: 2rem;
   margin: 0 auto;
-  margin-top: 7.8rem;
+  margin-block-start: 7.8rem;
   background-color: var(--white);
   color: var(--secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    margin-block-start: 10.2rem;
+  }
+
+  .homeContent h1 {
+    letter-spacing: 0.338rem;
+  }
+
+  .homeContent h1 > span {
+    margin-block-start: -1.5rem;
+  }
+
+  .homeContent p {
+    margin-block-start: -1.3rem;
+    line-height: 2.8rem;
+  }
+
+  .explore {
+    margin-block-start: 15.5rem;
+    width: 24.2rem;
+    height: 24.2rem;
+  }
 }
