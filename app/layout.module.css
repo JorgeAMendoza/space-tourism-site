@@ -9,3 +9,10 @@
       center/cover;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .layoutBody {
+    background: url('/images/home/background-home-desktop.jpg') no-repeat
+      center/cover;
+  }
+}

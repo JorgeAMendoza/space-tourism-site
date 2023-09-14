@@ -5,7 +5,7 @@
 }
 
 .homeContent h1 {
-  font-size: clamp(1.6rem, 1.5vw + 1rem, 2rem);
+  font-size: clamp(1.6rem, 1.5vw + 1rem, 1.8rem);
   text-transform: uppercase;
   color: var(--primary);
   letter-spacing: 0.27rem;
@@ -26,7 +26,7 @@
   margin: 0 auto;
   margin-block-start: 0.6rem;
   line-height: 2.5rem;
-  width: min(100%, 44.4rem);
+  width: min(100%, 44.5rem);
 }
 
 .explore {
@@ -53,6 +53,7 @@
 
   .homeContent h1 {
     letter-spacing: 0.338rem;
+    font-size: clamp(2rem, 1vw + 1rem, 2.2rem);
   }
 
   .homeContent h1 > span {
@@ -68,5 +69,42 @@
     margin-block-start: 15.5rem;
     width: 24.2rem;
     height: 24.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    padding: 0 11rem;
+    margin-block-start: 24.8rem;
+    display: grid;
+    text-align: left;
+    grid-template-areas:
+      'title button'
+      'text button';
+  }
+
+  .homeContent h1 {
+    grid-area: title;
+    font-size: 2.8rem;
+    letter-spacing: 0.472rem;
+  }
+
+  .homeContent h1 > span {
+    margin-block-start: -0.9rem;
+  }
+
+  .homeContent p {
+    grid-area: text;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+  }
+
+  .explore {
+    margin-block-start: 0;
+    grid-area: button;
+    width: 27.4rem;
+    height: 27.4rem;
+    align-self: end;
   }
 }

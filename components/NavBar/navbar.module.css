@@ -98,8 +98,9 @@
     left: -5.8rem;
     height: 9.6rem;
     width: 45rem;
-    -webkit-backdrop-filter: (10px);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255 255 255 / 4%);
+    -webkit-backdrop-filter: (25px);
+    backdrop-filter: blur(25px);
     z-index: 0;
   }
 
@@ -146,7 +147,7 @@
   .navMenu::before {
     width: 90rem;
     top: -3.9rem;
-    left: -13.1rem;
+    left: -12.3rem;
   }
 
   .navMenu ul {
@@ -185,6 +186,13 @@
 
 @media screen and (min-width: 1440px) {
   .navMenu::after {
+    content: '';
+    position: absolute;
+    height: 0.1rem;
     width: 47.3rem;
+    right: 63.7rem;
+    top: 1rem;
+    background-color: var(--white);
+    z-index: 1;
   }
 }
