@@ -1,0 +1,138 @@
+.home {
+  composes: container from '../styles/utils.module.css';
+  text-align: center;
+  margin-block-start: 2.1rem;
+  z-index: 1;
+}
+
+.homeContent h1 {
+  font-size: clamp(1.6rem, 1.5vw + 1rem, 1.8rem);
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.27rem;
+}
+
+.homeContent h1 > span {
+  font-size: clamp(8rem, 18.5vw + 1rem, 15rem);
+  display: block;
+  color: var(--light-text);
+  font-weight: 400;
+  letter-spacing: normal;
+  margin-block-start: 0.2rem;
+}
+
+.homeContent p {
+  color: var(--primary);
+  font-size: clamp(1.5rem, 2vw + 1rem, 1.6rem);
+  margin: 0 auto;
+  margin-block-start: 0.6rem;
+  line-height: 2.5rem;
+  width: min(100%, 44.5rem);
+}
+
+.explore {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  margin-block-start: 7.8rem;
+  background-color: var(--white);
+}
+
+.explore a {
+  color: var(--secondary);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore::before {
+  content: '';
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-color: rgba(255 255 255 / 10%);
+  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  z-index: -2;
+}
+
+.explore:hover::before,
+.explore:focus-within::before {
+  transform: scale(3);
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    margin-block-start: 10.2rem;
+  }
+
+  .homeContent h1 {
+    letter-spacing: 0.338rem;
+    font-size: clamp(2rem, 1vw + 1rem, 2.2rem);
+  }
+
+  .homeContent h1 > span {
+    margin-block-start: -1.5rem;
+  }
+
+  .homeContent p {
+    margin-block-start: -1.3rem;
+    line-height: 2.8rem;
+  }
+
+  .explore {
+    margin-block-start: 15.5rem;
+    width: 24.2rem;
+    height: 24.2rem;
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    padding: 0 11rem;
+    margin-block-start: 24.8rem;
+    display: grid;
+    text-align: left;
+    grid-template-areas:
+      'title button'
+      'text button';
+  }
+
+  .homeContent h1 {
+    grid-area: title;
+    font-size: 2.8rem;
+    letter-spacing: 0.472rem;
+  }
+
+  .homeContent h1 > span {
+    margin-block-start: -0.9rem;
+  }
+
+  .homeContent p {
+    grid-area: text;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+  }
+
+  .explore {
+    margin-block-start: 0;
+    grid-area: button;
+    width: 27.4rem;
+    height: 27.4rem;
+    align-self: end;
+  }
+}

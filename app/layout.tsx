@@ -1,9 +1,8 @@
 import NavBar from '@/components/NavBar/NavBar'
-import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { barlow } from './font'
+import './globals.css'
+import style from './layout.module.css'
 
 export const metadata: Metadata = {
   title: 'Space Tourism',
@@ -17,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className={barlow.className}>
+      <body className={style.layoutBody}>
         <header>
           <NavBar />
         </header>
