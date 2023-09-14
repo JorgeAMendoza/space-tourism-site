@@ -2,6 +2,7 @@
   composes: container from '../styles/utils.module.css';
   text-align: center;
   margin-block-start: 2.1rem;
+  z-index: 1;
 }
 
 .homeContent h1 {
@@ -36,7 +37,7 @@
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  font-size: clamp(2rem, 3vw + 1rem, 3.2rem);
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
   line-height: 2rem;
@@ -69,6 +70,7 @@
     margin-block-start: 15.5rem;
     width: 24.2rem;
     height: 24.2rem;
+    font-size: 3.2rem;
   }
 }
 
