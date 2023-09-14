@@ -18,12 +18,9 @@ export default function Home() {
         </p>
       </div>
 
-      <Link
-        href="/destinations"
-        className={`${bellefair.className} ${style.explore}`}
-      >
-        explore
-      </Link>
+      <div className={`${bellefair.className} ${style.explore}`}>
+        <Link href="/destinations">explore</Link>
+      </div>
     </main>
   )
 }

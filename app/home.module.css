@@ -31,6 +31,7 @@
 }
 
 .explore {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +45,32 @@
   margin: 0 auto;
   margin-block-start: 7.8rem;
   background-color: var(--white);
+}
+
+.explore a {
   color: var(--secondary);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore::before {
+  content: '';
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-color: rgba(255 255 255 / 10%);
+  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  z-index: -2;
+}
+
+.explore:hover::before,
+.explore:focus-within::before {
+  transform: scale(3);
 }
 
 @media screen and (min-width: 768px) {
