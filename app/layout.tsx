@@ -1,8 +1,11 @@
+'use client'
+
 import NavBar from '@/components/NavBar/NavBar'
 import type { Metadata } from 'next'
 import { barlow } from './font'
 import './globals.css'
 import style from './layout.module.css'
+import { usePathname } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'Space Tourism',
@@ -15,9 +18,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname()
+
   return (
     <html lang="en" className={barlow.className}>
-      <body className={style.layoutBody}>
+      <body className={style.layoutBody} data-path={pathname}>
         <header>
           <NavBar />
         </header>
