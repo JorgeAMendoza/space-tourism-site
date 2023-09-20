@@ -1,0 +1,13 @@
+.planetNavigation {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  min-height: 2.8rem;
+}
+
+.planetNavigation li > button {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.236rem;
+  color: var(--purple-text);
+}

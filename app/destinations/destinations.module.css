@@ -1,0 +1,7 @@
+.destinations {
+  composes: container from '../../styles/utils.module.css';
+}
+
+.pageTitle {
+  composes: title from '../../styles/utils.module.css';
+}

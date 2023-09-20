@@ -1,20 +1,19 @@
-// grab data for destination
+import { fetchDestinationData } from '@/services/api/destination'
+import { barlowCondensed } from '../font'
+import PlanetSlider from './components/PlanetSlider/PlanetSlider'
+import style from './destinations.module.css'
 
-import { fetchDestinationData } from "@/services/api/destination"
-import PlanetSlider from "./components/PlanetSlider/PlanetSlider"
-
-// pass into slider so it can render the navigator and content. 
+// pass into slider so it can render the navigator and content.
 function getData() {
   const dests = fetchDestinationData()
   return dests
 }
 
-
 const DestinationsPage = () => {
   const data = getData()
   return (
-    <section>
-      <h1>
+    <section className={style.destinations}>
+      <h1 className={`${barlowCondensed.className} ${style.pageTitle}`}>
         <span>01</span> pick your destination
       </h1>
 

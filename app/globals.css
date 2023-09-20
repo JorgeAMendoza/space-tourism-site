@@ -5,6 +5,7 @@
   --primary: var(--light-purple);
   --secondary: var(--black-blue);
   --light-text: #fff;
+  --purple-text: var(--light-purple);
   --fast-transition: 0.25s linear;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --transition-slow: all 0.75s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -32,6 +33,7 @@ body {
   height: 100%;
   position: relative;
   color: var(--light-text);
+  padding-bottom: 3rem;
 }
 
 body.mobileActive {
