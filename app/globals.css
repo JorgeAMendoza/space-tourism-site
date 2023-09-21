@@ -30,7 +30,6 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   font-size: 1.6rem;
-  height: 100%;
   position: relative;
   color: var(--light-text);
   padding-bottom: 3rem;
