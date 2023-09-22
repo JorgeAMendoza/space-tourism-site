@@ -32,7 +32,6 @@ body {
   font-size: 1.6rem;
   position: relative;
   color: var(--light-text);
-  padding-bottom: 3rem;
 }
 
 body.mobileActive {
