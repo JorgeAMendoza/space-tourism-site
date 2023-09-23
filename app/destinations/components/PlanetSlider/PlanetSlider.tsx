@@ -11,7 +11,9 @@ interface PlanetSliderProps {
 }
 
 const PlanetSlider = ({ destinations }: PlanetSliderProps) => {
+  const [nextPlanet, setNextPlanet] = useState<string>('')
   const [destination, setDestination] = useState<null | string>(null)
+  const [planetSwitch, setPlanetSwitch] = useState<boolean>(false)
 
   useEffect(() => {
     setDestination(destinations[0]['name'])
@@ -32,12 +34,26 @@ const PlanetSlider = ({ destinations }: PlanetSliderProps) => {
 
   return (
     <div>
-      <Planet data={destinationData}>
+      <Planet
+        data={destinationData}
+        planetSwitch={planetSwitch}
+        showNextPlanet={() => {
+          setPlanetSwitch(false)
+          setDestination(nextPlanet)
+        }}
+      >
         <nav>
           <ul className={style.planetNavigation}>
             {destinations.map((dest) => (
               <li key={dest.name} className={`${barlowCondensed.className}`}>
-                <button type="button" onClick={() => setDestination(dest.name)}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (destination === dest.name) return
+                    setNextPlanet(dest.name)
+                    setPlanetSwitch(true)
+                  }}
+                >
                   {dest.name}
                 </button>
               </li>
