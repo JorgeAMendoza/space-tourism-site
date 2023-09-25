@@ -34,7 +34,7 @@
 
 .planetNav {
   grid-area: nav;
-  margin-block-start: 5.2rem;
+  margin-block-start: 2rem;
   animation: fade-in 0.5s ease-in-out;
 }
 
@@ -118,6 +118,10 @@
   .planetText {
     margin-block-start: 0.45rem;
     padding-bottom: 4.7rem;
+  }
+
+  .planetNav {
+    margin-block-start: 5.2rem;
   }
 
   .planetStats {
