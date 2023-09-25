@@ -1,6 +1,6 @@
 .destinations {
   composes: container from '../../styles/utils.module.css';
-  width: min(100%, 111rem);
+  width: min(87%, 111rem);
 }
 
 .pageTitle {
