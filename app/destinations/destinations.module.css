@@ -3,5 +3,15 @@
 }
 
 .pageTitle {
-  composes: title from '../../styles/utils.module.css';
+  composes: title from '../../styles/utils/fonts.module.css';
+}
+
+@media screen and (min-width: 768px) {
+  .destinations {
+    margin-block-start: 3.8rem;
+  }
+
+  .pageTitle {
+    text-align: left;
+  }
 }

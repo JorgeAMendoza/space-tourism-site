@@ -11,3 +11,14 @@
   letter-spacing: 0.236rem;
   color: var(--purple-text);
 }
+
+@media screen and (min-width: 768px) {
+  .planetNavigation {
+    gap: 3.5rem;
+  }
+
+  .planetNavigation li > button {
+    font-size: 1.6rem;
+    letter-spacing: 0.27rem;
+  }
+}

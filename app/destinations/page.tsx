@@ -14,7 +14,7 @@ const DestinationsPage = () => {
   return (
     <section className={style.destinations}>
       <h1 className={`${barlowCondensed.className} ${style.pageTitle}`}>
-        <span>01</span> pick your destination
+        <p>01</p> pick your destination
       </h1>
 
       <PlanetSlider destinations={data} />
