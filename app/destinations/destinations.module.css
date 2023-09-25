@@ -1,5 +1,6 @@
 .destinations {
   composes: container from '../../styles/utils.module.css';
+  width: min(100%, 111rem);
 }
 
 .pageTitle {
@@ -13,5 +14,11 @@
 
   .pageTitle {
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .destinations {
+    margin-block-start: 7.5rem;
   }
 }

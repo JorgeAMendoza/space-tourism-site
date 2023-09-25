@@ -31,3 +31,18 @@
     letter-spacing: 0.338rem;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .title {
+    font-size: 2.8rem;
+    letter-spacing: 0.472rem;
+  }
+
+  .title p {
+    margin-right: 1.6rem;
+  }
+
+  .heading-m {
+    font-size: 10rem;
+  }
+}
