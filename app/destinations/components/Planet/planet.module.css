@@ -142,7 +142,40 @@
 
 @media screen and (min-width: 1024px) {
   .planet {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.46fr 1fr;
     grid-template-areas: 'planetImage' 'planetInfo';
+    margin-block-start: 6rem;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .planetImage {
+    width: 44.5rem;
+    height: 44.5rem;
+    justify-self: start;
+    margin-block-start: 3.5rem;
+  }
+
+  .planetNav {
+    margin-block-start: 0;
+  }
+
+  .planetDescription {
+    margin-block-start: 3.9rem;
+  }
+
+  .planetText {
+    padding-bottom: 5.2rem;
+  }
+
+  .planetStats {
+    justify-content: flex-start;
+    gap: 8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .planetImage {
+    margin-left: 6.4rem;
   }
 }
