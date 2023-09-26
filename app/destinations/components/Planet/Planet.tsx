@@ -25,32 +25,34 @@ const Planet = ({
         showNextPlanet()
       }}
     >
-      <div className={style.planetNav}>{children}</div>
-
       <Image
         src={data.images.webp}
         width={170}
         height={170}
         alt={`image of the destination ${data.name}`}
-        className={style.planetImage}
         priority={true}
+        className={style.planetImage}
         data-switch={planetSwitch}
       />
-      <div className={style.planetDescription} data-switch={planetSwitch}>
-        <h2 className={`${bellefair.className} ${style.planetName}`}>
-          {data.name}
-        </h2>
-        <p className={`${style.planetText}`}>{data.description}</p>
-      </div>
-      <div className={style.planetStats} data-switch={planetSwitch}>
-        <div className={style.stat}>
-          <p className={barlowCondensed.className}>avg. distance</p>
-          <p className={bellefair.className}>{data.distance}</p>
+      <div>
+        {' '}
+        <div className={style.planetNav}>{children}</div>
+        <div className={style.planetDescription} data-switch={planetSwitch}>
+          <h2 className={`${bellefair.className} ${style.planetName}`}>
+            {data.name}
+          </h2>
+          <p className={`${style.planetText}`}>{data.description}</p>
         </div>
+        <div className={style.planetStats} data-switch={planetSwitch}>
+          <div className={style.stat}>
+            <p className={barlowCondensed.className}>avg. distance</p>
+            <p className={bellefair.className}>{data.distance}</p>
+          </div>
 
-        <div className={style.stat}>
-          <p className={barlowCondensed.className}>est. travel time</p>
-          <p className={bellefair.className}>{data.travel}</p>
+          <div className={style.stat}>
+            <p className={barlowCondensed.className}>est. travel time</p>
+            <p className={bellefair.className}>{data.travel}</p>
+          </div>
         </div>
       </div>
     </div>
