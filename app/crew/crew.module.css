@@ -1,0 +1,8 @@
+.crew {
+  composes: container from '../../styles/utils.module.css';
+  width: min(87%, 111rem);
+}
+
+.pageTitle {
+  composes: title from '../../styles/utils/fonts.module.css';
+}

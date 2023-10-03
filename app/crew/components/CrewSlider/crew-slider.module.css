@@ -1,0 +1,18 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.slider li > button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  opacity: 0.17;
+  transition: var(--transition);
+}
+
+.slider li > button[data-active='true'] {
+  opacity: 1;
+}

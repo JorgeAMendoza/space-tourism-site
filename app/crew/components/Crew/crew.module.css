@@ -1,0 +1,44 @@
+.crew {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  margin-top: 2.8rem;
+}
+
+.nav {
+  border: 1px solid red;
+}
+
+.crewInfo {
+  grid-area: 'crewInfo';
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.crewInfo p {
+  font-size: 1.5rem;
+  color: var(--purple-text);
+  margin-block-start: 1.3rem;
+  line-height: 1.6;
+}
+
+.crewInfo h2 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-block-start: 2.3rem;
+}
+
+.crewInfo h2 > p {
+  font-size: 1.6rem;
+  opacity: 0.49;
+  line-height: 1.6;
+}
+
+.crewImage {
+  grid-area: 'crewImage';
+  border-bottom: 1px solid #383b4b;
+}
+
+.crewImage img {
+  margin: 0 auto;
+}

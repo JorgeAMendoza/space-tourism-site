@@ -3,6 +3,7 @@
 import { CrewMember } from '@/types/api'
 import { useMemo, useState } from 'react'
 import Crew from '../Crew/Crew'
+import style from './crew-slider.module.css'
 
 interface CrewSliderProps {
   crew: CrewMember[]
@@ -24,7 +25,7 @@ const CrewSlider = ({ crew }: CrewSliderProps) => {
     <div>
       <Crew data={crewMemberData}>
         <nav aria-label="navigation for crew members">
-          <ul>
+          <ul className={style.slider}>
             {crew.map((member) => (
               <li key={member.name}>
                 <button
