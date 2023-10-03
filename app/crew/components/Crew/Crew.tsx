@@ -1,6 +1,5 @@
 import { CrewMember } from '@/types/api'
 import { ReactNode } from 'react'
-import Image from 'next/image'
 import style from './crew.module.css'
 import { bellefair } from '@/app/font'
 
@@ -21,11 +20,11 @@ const Crew = ({ data, children }: CrewProps) => {
         <p>{data.bio}</p>
       </div>
       <div className={style.crewImage}>
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={data.images.webp}
           alt={`image of ${data.name}`}
-          width={165}
-          height={222}
+          loading="lazy"
         />
       </div>
     </div>

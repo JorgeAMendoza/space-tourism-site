@@ -41,4 +41,6 @@
 
 .crewImage img {
   margin: 0 auto;
+  width: fit-content;
+  height: 22.2rem;
 }
