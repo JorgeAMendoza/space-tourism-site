@@ -1,6 +1,6 @@
 .destinations {
   composes: container from '../../styles/utils.module.css';
-  width: min(87%, 111rem);
+  width: 87%;
 }
 
 .pageTitle {
@@ -10,6 +10,7 @@
 @media screen and (min-width: 768px) {
   .destinations {
     margin-block-start: 3.8rem;
+    width: min(90%, 111rem);
   }
 
   .pageTitle {

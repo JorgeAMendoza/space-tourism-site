@@ -12,12 +12,12 @@ const Crew = ({ data, children }: CrewProps) => {
   return (
     <div className={style.crew}>
       <div className={style.crewInfo}>
-        <div>{children}</div>
+        <div className={style.nav}>{children}</div>
         <h2 className={bellefair.className}>
           <p>{data.role}</p>
           {data.name}
         </h2>
-        <p>{data.bio}</p>
+        <p data-name={data.name}>{data.bio}</p>
       </div>
       <div className={style.crewImage}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
