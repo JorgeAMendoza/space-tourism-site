@@ -13,10 +13,10 @@
 .crewInfo > p {
   font-size: 1.5rem;
   color: var(--purple-text);
-  margin-block-start: 1.3rem;
   line-height: 1.6;
   width: min(100%, 45.8rem);
   margin: 0 auto;
+  margin-block-start: 1.3rem;
 }
 
 /* adjust other crew member text */
