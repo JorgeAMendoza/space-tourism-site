@@ -9,6 +9,11 @@
   --fast-transition: 0.25s linear;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --transition-slow: all 0.75s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  /* fonts */
+  --barlow-xs-regular: 400 1.5rem/1.65 barlow, sans-serif;
+  --barlow-sm-regular: 400 1.6rem/1.75 barlow, sans-serif;
+  --bellefair-title-sm: 400 5.6rem/1.15 'Bellefair', sans-serif;
 }
 
 html {

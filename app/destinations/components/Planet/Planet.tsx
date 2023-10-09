@@ -38,9 +38,7 @@ const Planet = ({
         {' '}
         <div className={style.planetNav}>{children}</div>
         <div className={style.planetDescription} data-switch={planetSwitch}>
-          <h2 className={`${bellefair.className} ${style.planetName}`}>
-            {data.name}
-          </h2>
+          <h2 className={`${style.planetName}`}>{data.name}</h2>
           <p className={`${style.planetText}`}>{data.description}</p>
         </div>
         <div className={style.planetStats} data-switch={planetSwitch}>

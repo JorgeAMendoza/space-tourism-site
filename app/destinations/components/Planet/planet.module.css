@@ -48,7 +48,7 @@
 }
 
 .planetDescription {
-  margin-block-start: 1.9rem;
+  margin-block-start: 2.7rem;
   animation: fade-in 0.5s ease-in-out;
 }
 
@@ -57,12 +57,12 @@
 }
 
 .planetName {
-  composes: heading-m from '../../../../styles/utils/fonts.module.css';
+  font: var(--bellefair-title-sm);
   text-transform: uppercase;
 }
 
 .planetText {
-  composes: basetext from '../../../../styles/utils.module.css';
+  font: var(--barlow-xs-regular);
   color: var(--purple-text);
   border-bottom: 1px solid #383b4b;
   padding-bottom: 3rem;
@@ -114,6 +114,7 @@
   }
 
   .planetText {
+    font: var(--barlow-sm-regular);
     margin-block-start: 0.45rem;
     padding-bottom: 4.7rem;
   }
