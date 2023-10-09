@@ -14,23 +14,3 @@
     width: min(92.5%, 145rem);
   }
 }
-
-/* text */
-.basetext {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-}
-
-@media screen and (min-width: 768px) {
-  .basetext {
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .basetext {
-    font-size: 1.8rem;
-    line-height: 3.2rem;
-  }
-}
