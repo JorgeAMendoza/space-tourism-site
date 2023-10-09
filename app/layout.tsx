@@ -1,11 +1,13 @@
 'use client'
 
 import NavBar from '@/components/NavBar/NavBar'
+import '@fontsource/barlow'
+import '@fontsource/bellefair'
 import type { Metadata } from 'next'
+import { usePathname } from 'next/navigation'
 import { barlow } from './font'
 import './globals.css'
 import style from './layout.module.css'
-import { usePathname } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'Space Tourism',

@@ -57,7 +57,7 @@
 }
 
 .planetName {
-  font: var(--bellefair-title-sm);
+  font: var(--bellefair-title-md);
   text-transform: uppercase;
 }
 
@@ -84,18 +84,18 @@
 }
 
 .stat:first-of-type {
-  margin-block-end: 2.4rem;
+  margin-block-end: 2.8rem;
 }
 
 .stat p:first-of-type {
   color: var(--purple-text);
   font-size: 1.4rem;
   letter-spacing: 0.236rem;
-  margin-block-end: 0.6rem;
+  margin-block-end: 1.2rem;
 }
 
 .stat p:last-of-type {
-  font-size: 2.8rem;
+  font: var(--bellefair-lg-regular);
 }
 
 @media screen and (min-width: 768px) {
@@ -110,12 +110,16 @@
   }
 
   .planetDescription {
-    margin-block-start: 3.3rem;
+    margin-block-start: 3.1rem;
+  }
+
+  .planetName {
+    font: var(--bellefair-title-lg);
   }
 
   .planetText {
     font: var(--barlow-sm-regular);
-    margin-block-start: 0.45rem;
+    margin-block-start: -0.45rem;
     padding-bottom: 4.7rem;
   }
 
@@ -131,7 +135,7 @@
   }
 
   .stat p:first-of-type {
-    margin-block-end: 0.5rem;
+    margin-block-end: 1rem;
   }
 
   .stat:first-of-type {
@@ -162,11 +166,17 @@
   }
 
   .planetDescription {
-    margin-block-start: 3.9rem;
+    margin-block-start: 4.3rem;
+  }
+
+  .planetName {
+    font: var(--bellefair-title-xl);
   }
 
   .planetText {
+    font: var(--barlow-md-regular);
     padding-bottom: 5.2rem;
+    margin-block-start: 1.7rem;
   }
 
   .planetStats {

@@ -10,10 +10,21 @@
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --transition-slow: all 0.75s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-  /* fonts */
+  /* barlow */
   --barlow-xs-regular: 400 1.5rem/1.65 barlow, sans-serif;
   --barlow-sm-regular: 400 1.6rem/1.75 barlow, sans-serif;
-  --bellefair-title-sm: 400 5.6rem/1.15 'Bellefair', sans-serif;
+  --barlow-md-regular: 400 1.8rem/1.77 barlow, sans-serif;
+
+  /* bellefair */
+  --bellefair-lg-regular: 400 2.8rem/1.142 'Bellefair', sans-serif;
+  --bellefair-title-xs: 400 2.8rem/1.214 'Bellefair', sans-serif;
+  --bellefair-title-sm: 400 3.2rem/1.156 'Bellefair', sans-serif;
+  --bellefair-title-md: 400 5.6rem/1.15 'Bellefair', sans-serif;
+  --bellefair-title-lg: 400 8rem/1.4375 'Bellefair', sans-serif;
+  --bellefair-title-xl: 400 10rem/1.15 'Bellefair', sans-serif;
+  --bellefair-title-xxl: 400 15rem/1.147 'Bellefair', sans-serif;
+
+  /* barlow condensed */
 }
 
 html {

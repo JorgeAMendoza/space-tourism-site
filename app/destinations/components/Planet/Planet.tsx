@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { ReactNode } from 'react'
 import { Destination } from '@/types/api'
 import style from './planet.module.css'
-import { barlowCondensed, bellefair } from '@/app/font'
+import { barlowCondensed } from '@/app/font'
 
 type PlanetProps = {
   data: Destination
@@ -44,12 +44,12 @@ const Planet = ({
         <div className={style.planetStats} data-switch={planetSwitch}>
           <div className={style.stat}>
             <p className={barlowCondensed.className}>avg. distance</p>
-            <p className={bellefair.className}>{data.distance}</p>
+            <p>{data.distance}</p>
           </div>
 
           <div className={style.stat}>
             <p className={barlowCondensed.className}>est. travel time</p>
-            <p className={bellefair.className}>{data.travel}</p>
+            <p>{data.travel}</p>
           </div>
         </div>
       </div>
