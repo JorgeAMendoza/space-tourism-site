@@ -1,5 +1,4 @@
 import { fetchDestinationData } from '@/services/api/destination'
-import { barlowCondensed } from '../font'
 import PlanetSlider from './components/PlanetSlider/PlanetSlider'
 import style from './destinations.module.css'
 
@@ -13,7 +12,7 @@ const DestinationsPage = () => {
   const data = getData()
   return (
     <section className={style.destinations}>
-      <h1 className={`${barlowCondensed.className} ${style.pageTitle}`}>
+      <h1 className={style.pageTitle}>
         <p>01</p> pick your destination
       </h1>
 

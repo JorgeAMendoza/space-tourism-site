@@ -32,6 +32,11 @@
   --barlow-cond-subtitle-md-regular: 400 2rem/1.2 'Barlow Condensed', sans-serif;
   --barlow-cond-subtitle-lg-regular: 400 2.8rem/1.214 'Barlow Condensed',
     sans-serif;
+
+  /* titles */
+  --info-page-title: 400 1.6rem 'Barlow Condensed', sans-serif;
+  --info-page-title-tablet: 400 2rem 'Barlow Condensed', sans-serif;
+  --info-page-title-desktop: 400 2.8rem 'Barlow Condensed', sans-serif;
 }
 
 html {
