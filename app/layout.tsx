@@ -3,6 +3,7 @@
 import NavBar from '@/components/NavBar/NavBar'
 import '@fontsource/barlow'
 import '@fontsource/bellefair'
+import '@fontsource/barlow-condensed'
 import type { Metadata } from 'next'
 import { usePathname } from 'next/navigation'
 import { barlow } from './font'

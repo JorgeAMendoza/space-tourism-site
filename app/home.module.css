@@ -1,32 +1,31 @@
 .home {
   composes: container from '../styles/utils.module.css';
   text-align: center;
-  margin-block-start: 2.1rem;
+  margin-block-start: 2.6rem;
   z-index: 1;
 }
 
 .homeContent h1 {
-  font-size: clamp(1.6rem, 1.5vw + 1rem, 1.8rem);
+  font: var(--barlow-cond-subtitle-sm-regular);
+  line-height: 1.187;
   text-transform: uppercase;
   color: var(--primary);
   letter-spacing: 0.27rem;
 }
 
 .homeContent h1 > span {
-  font-size: clamp(8rem, 18.5vw + 1rem, 15rem);
+  font: var(--bellefair-title-lg);
   display: block;
   color: var(--light-text);
-  font-weight: 400;
   letter-spacing: normal;
-  margin-block-start: 0.2rem;
+  margin-block-start: 0.8rem;
 }
 
 .homeContent p {
+  font: var(--barlow-xs-regular);
   color: var(--primary);
-  font-size: clamp(1.5rem, 2vw + 1rem, 1.6rem);
   margin: 0 auto;
-  margin-block-start: 0.6rem;
-  line-height: 2.5rem;
+  margin-block-start: 1rem;
   width: min(100%, 44.5rem);
 }
 
@@ -75,21 +74,22 @@
 
 @media screen and (min-width: 768px) {
   .home {
-    margin-block-start: 10.2rem;
+    margin-block-start: 10.7rem;
   }
 
   .homeContent h1 {
     letter-spacing: 0.338rem;
-    font-size: clamp(2rem, 1vw + 1rem, 2.2rem);
+    font: var(--barlow-cond-subtitle-md-regular);
   }
 
   .homeContent h1 > span {
-    margin-block-start: -1.5rem;
+    font: var(--bellefair-title-xxl);
+    margin-block-start: 1.5rem;
   }
 
   .homeContent p {
-    margin-block-start: -1.3rem;
-    line-height: 2.8rem;
+    font: var(--barlow-sm-regular);
+    margin-block-start: 1rem;
   }
 
   .explore {
@@ -103,7 +103,7 @@
 @media screen and (min-width: 1024px) {
   .home {
     padding: 0 11rem;
-    margin-block-start: 24.8rem;
+    margin-block-start: 25.5rem;
     display: grid;
     text-align: left;
     grid-template-areas:
@@ -113,19 +113,19 @@
 
   .homeContent h1 {
     grid-area: title;
-    font-size: 2.8rem;
-    letter-spacing: 0.472rem;
+    font: var(--barlow-cond-subtitle-lg-regular);
+    letter-spacing: 4.72px;
   }
 
   .homeContent h1 > span {
-    margin-block-start: -0.9rem;
+    margin-block-start: 2.5rem;
   }
 
   .homeContent p {
+    font: var(--barlow-md-regular);
     grid-area: text;
     margin: 0;
-    font-size: 1.8rem;
-    line-height: 3.2rem;
+    margin-block-start: 2.5rem;
   }
 
   .explore {

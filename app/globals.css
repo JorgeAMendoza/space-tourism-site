@@ -25,6 +25,13 @@
   --bellefair-title-xxl: 400 15rem/1.147 'Bellefair', sans-serif;
 
   /* barlow condensed */
+  --barlow-cond-sm-regular: 400 1.6rem/1.75 'Barlow Condensed', sans-serif;
+  --barlow-cond-md-regular: 400 2.8rem/1.214 'Barlow Condensed', sans-serif;
+  --barlow-cond-subtitle-sm-regular: 400 1.6rem/1.75 'Barlow Condensed',
+    sans-serif;
+  --barlow-cond-subtitle-md-regular: 400 2rem/1.2 'Barlow Condensed', sans-serif;
+  --barlow-cond-subtitle-lg-regular: 400 2.8rem/1.214 'Barlow Condensed',
+    sans-serif;
 }
 
 html {
