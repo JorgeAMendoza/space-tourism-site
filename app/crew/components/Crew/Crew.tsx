@@ -1,7 +1,6 @@
 import { CrewMember } from '@/types/api'
 import { ReactNode } from 'react'
 import style from './crew.module.css'
-import { bellefair } from '@/app/font'
 
 interface CrewProps {
   data: CrewMember
@@ -13,7 +12,7 @@ const Crew = ({ data, children }: CrewProps) => {
     <div className={style.crew}>
       <div className={style.crewInfo}>
         <div className={style.nav}>{children}</div>
-        <h2 className={bellefair.className}>
+        <h2>
           <p>{data.role}</p>
           {data.name}
         </h2>

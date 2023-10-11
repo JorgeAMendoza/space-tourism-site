@@ -3,20 +3,25 @@
   flex-direction: column-reverse;
   justify-content: center;
   margin-top: 2.8rem;
+
+  /* fonts */
+  --crew-position: 400 1.6rem 'Bellefair', sans-serif;
+  --crew-position-tablet: 400 2.4rem 'Bellefair', sans-serif;
+  --crew-name: 400 2.4rem 'Bellefair', sans-serif;
+  --crew-name-tablet: 400 4rem 'Bellefair', sans-serif;
 }
 
 .crewInfo {
-  margin-top: 2.5rem;
+  margin-top: 2.6rem;
   text-align: center;
 }
 
 .crewInfo > p {
-  font-size: 1.5rem;
+  font: var(--barlow-xs-regular);
   color: var(--purple-text);
-  line-height: 1.6;
   width: min(100%, 45.8rem);
   margin: 0 auto;
-  margin-block-start: 1.3rem;
+  margin-block-start: 1.7rem;
 }
 
 /* adjust other crew member text */
@@ -34,15 +39,15 @@
 }
 
 .crewInfo h2 {
-  font-size: 2.4rem;
+  font: var(--crew-name);
   text-transform: uppercase;
   margin-block-start: 2.3rem;
 }
 
 .crewInfo h2 > p {
-  font-size: 1.6rem;
+  font: var(--crew-position);
   opacity: 0.49;
-  line-height: 1.6;
+  margin-block-end: 0.9rem;
 }
 
 .crewImage {
@@ -79,19 +84,17 @@
   }
 
   .crewInfo > p {
-    margin-block-start: 1rem;
-    font-size: 1.6rem;
-    line-height: 1.7;
+    margin-block-start: 1.6rem;
+    font: var(--barlow-sm-regular);
   }
 
   .crewInfo h2 {
-    font-size: 4rem;
+    font: var(--crew-name-tablet);
     margin-block-start: 0;
   }
 
   .crewInfo h2 > p {
-    font-size: 2.4rem;
-    line-height: 1.4;
+    font: var(--crew-position-tablet);
   }
 
   .nav {
