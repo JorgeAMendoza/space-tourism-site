@@ -37,7 +37,9 @@
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
-  font-size: 2rem;
+  font:
+    400 2rem Bellefair,
+    sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
   line-height: 2rem;

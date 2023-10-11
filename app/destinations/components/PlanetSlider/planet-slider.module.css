@@ -3,9 +3,14 @@
   justify-content: center;
   gap: 2.5rem;
   min-height: 2.8rem;
+
+  /* fonts */
+  --nav-item: 400 1.4rem 'Barlow Condensed', sans-serif;
+  --nav-item-tablet: 400 1.6rem 'Barlow Condensed', sans-serif;
 }
 
 .planetNavigation li > button {
+  font: var(--nav-item);
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 0.236rem;
@@ -18,7 +23,7 @@
   }
 
   .planetNavigation li > button {
-    font-size: 1.6rem;
+    font: var(--nav-item-tablet);
     letter-spacing: 0.27rem;
   }
 }

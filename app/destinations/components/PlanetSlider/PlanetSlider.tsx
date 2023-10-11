@@ -3,7 +3,6 @@
 import { Destination } from '@/types/api'
 import { useEffect, useMemo, useState } from 'react'
 import Planet from '../Planet/Planet'
-import { barlowCondensed } from '@/app/font'
 import style from './planet-slider.module.css'
 
 interface PlanetSliderProps {
@@ -45,7 +44,7 @@ const PlanetSlider = ({ destinations }: PlanetSliderProps) => {
         <nav>
           <ul className={style.planetNavigation}>
             {destinations.map((dest) => (
-              <li key={dest.name} className={`${barlowCondensed.className}`}>
+              <li key={dest.name}>
                 <button
                   type="button"
                   onClick={() => {

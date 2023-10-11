@@ -28,6 +28,9 @@
   justify-items: center;
   margin-top: 3rem;
   padding-bottom: 3rem;
+
+  /* fonts */
+  --stat-name: 400 1.4rem 'Barlow Condensed', sans-serif;
 }
 
 .planetInfo {
@@ -81,6 +84,7 @@
 
 .stat {
   text-transform: uppercase;
+  font: var(--stat-name);
 }
 
 .stat:first-of-type {

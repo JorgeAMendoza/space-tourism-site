@@ -1,14 +1,12 @@
 import Link from 'next/link'
 import style from './home.module.css'
-import { barlowCondensed, bellefair } from './font'
 
 export default function Home() {
   return (
     <main className={style.home}>
       <div className={style.homeContent}>
-        <h1 className={barlowCondensed.className}>
-          so, you want to travel to{' '}
-          <span className={bellefair.className}>space</span>
+        <h1>
+          so, you want to travel to <span>space</span>
         </h1>
         <p>
           Let’s face it; if you want to go to space, you might as well genuinely
@@ -18,7 +16,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className={`${bellefair.className} ${style.explore}`}>
+      <div className={style.explore}>
         <Link href="/destinations">explore</Link>
       </div>
     </main>
