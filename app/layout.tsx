@@ -7,7 +7,6 @@ import '@fontsource/barlow-condensed/400.css'
 import '@fontsource/barlow-condensed/700.css'
 import type { Metadata } from 'next'
 import { usePathname } from 'next/navigation'
-import { barlow } from './font'
 import './globals.css'
 import style from './layout.module.css'
 
@@ -25,7 +24,7 @@ export default function RootLayout({
   const pathname = usePathname()
 
   return (
-    <html lang="en" className={barlow.className}>
+    <html lang="en">
       <body className={style.layoutBody} data-path={pathname}>
         <header>
           <NavBar />

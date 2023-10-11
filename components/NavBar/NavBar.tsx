@@ -5,7 +5,6 @@ import Link from 'next/link'
 import menuIcon from '@/public/images/icons/icon-hamburger.svg'
 import closeIcon from '@/public/images/icons/icon-close.svg'
 import style from './navbar.module.css'
-import { barlowCondensed } from '@/app/font'
 import { useEffect, useState } from 'react'
 import useIsMobile from '@/hooks/useIsMobile'
 import { usePathname } from 'next/navigation'
@@ -55,7 +54,7 @@ const NavBar = () => {
           >
             <Image src={closeIcon as string} alt="" />
           </button>
-          <ul className={barlowCondensed.className}>
+          <ul>
             <li data-active={pathname === '/'}>
               <Link href="/">
                 <span>00</span> <span>Home</span>
@@ -85,7 +84,7 @@ const NavBar = () => {
           id="nav-menu"
           className={style.navMenu}
         >
-          <ul className={barlowCondensed.className}>
+          <ul>
             <li data-active={pathname === '/'}>
               <Link href="/">
                 <span>00</span> <span>Home</span>
