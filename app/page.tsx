@@ -1,5 +1,12 @@
 import Link from 'next/link'
 import style from './home.module.css'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Space Tourism',
+  description:
+    'Space tourism website that contains information on the possible planets to tour, along with the crew and technology needed to make it happen.',
+}
 
 export default function Home() {
   return (
