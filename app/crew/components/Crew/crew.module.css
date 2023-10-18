@@ -1,3 +1,23 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .crew {
   display: flex;
   flex-direction: column-reverse;
@@ -24,6 +44,11 @@
   width: min(100%, 45.8rem);
   margin: 0 auto;
   margin-block-start: 1.7rem;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.crewInfo > p[data-switch='true'] {
+  animation: fade-out 0.5s ease-in-out forwards;
 }
 
 /* adjust other crew member text */
@@ -44,12 +69,17 @@
   font: var(--crew-name);
   text-transform: uppercase;
   margin-block-start: 2.3rem;
+  animation: fade-in 0.5s ease-in-out;
 }
 
 .crewInfo h2 > p {
   font: var(--crew-position);
   opacity: 0.49;
   margin-block-end: 0.9rem;
+}
+
+.crewInfo h2[data-switch='true'] {
+  animation: fade-out 0.5s ease-in-out forwards;
 }
 
 .crewImage {
@@ -60,6 +90,11 @@
   margin: 0 auto;
   height: 22.2rem;
   object-fit: contain;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.crewImage img[data-switch='true'] {
+  animation: fade-out 0.5s ease-in-out forwards;
 }
 
 @media screen and (min-width: 768px) {

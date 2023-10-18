@@ -10,6 +10,8 @@ interface CrewSliderProps {
 }
 
 const CrewSlider = ({ crew }: CrewSliderProps) => {
+  const [nextCrewMember, setNextCrewMember] = useState<string>('')
+  const [crewSwitch, setCrewSwitch] = useState<boolean>(false)
   const [currentMember, setCurrentMember] = useState(crew[0].name)
 
   const crewMemberData = useMemo(() => {
@@ -23,7 +25,14 @@ const CrewSlider = ({ crew }: CrewSliderProps) => {
 
   return (
     <div>
-      <Crew data={crewMemberData}>
+      <Crew
+        data={crewMemberData}
+        crewSwitch={crewSwitch}
+        showNextCrewMember={() => {
+          setCrewSwitch(false)
+          setCurrentMember(nextCrewMember)
+        }}
+      >
         <nav aria-label="navigation for crew members">
           <ul className={style.slider}>
             {crew.map((member) => (
@@ -31,7 +40,9 @@ const CrewSlider = ({ crew }: CrewSliderProps) => {
                 <button
                   type="button"
                   onClick={() => {
-                    setCurrentMember(member.name)
+                    if (currentMember === member.name) return
+                    setNextCrewMember(member.name)
+                    setCrewSwitch(true)
                   }}
                   aria-label={`button to navigate to crew member ${member.name}`}
                   data-active={member.name === currentMember ? 'true' : 'false'}
