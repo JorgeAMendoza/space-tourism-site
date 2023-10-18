@@ -7,8 +7,10 @@
   /* fonts */
   --crew-position: 400 1.6rem 'Bellefair', sans-serif;
   --crew-position-tablet: 400 2.4rem 'Bellefair', sans-serif;
+  --crew-position-desktop: 400 3.2rem/3.7rem 'Bellefair', sans-serif;
   --crew-name: 400 2.4rem 'Bellefair', sans-serif;
   --crew-name-tablet: 400 4rem 'Bellefair', sans-serif;
+  --crew-name-desktop: 400 5.6rem/6.4rem 'Bellefair', sans-serif;
 }
 
 .crewInfo {
@@ -63,7 +65,6 @@
 @media screen and (min-width: 768px) {
   .crew {
     flex-direction: column;
-    min-height: 100%;
     min-height: calc(100svh - 190.5px);
   }
 
@@ -99,5 +100,68 @@
     order: 1;
     margin-top: 3.2rem;
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  .crew {
+    min-height: 54rem;
+    position: relative;
+  }
+
+  .crewInfo {
+    min-height: 50.5rem;
+    text-align: left;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+  }
+
+  .crewImage {
+    position: absolute;
+    bottom: -8.2rem;
+    right: 0;
+  }
+
+  .crewImage img {
+    height: 70rem;
+    transform: translateX(2.5rem);
+    border-bottom: 1px solid #383b4b;
+  }
+
+  .crewImage img[src*='shuttleworth'] {
+    height: 64rem;
+    transform: translateX(-3rem);
+  }
+
+  .crewImage img[src*='glover'] {
+    height: 64.7rem;
+  }
+
+  .crewImage img[src*='ansari'] {
+    height: 60rem;
+    transform: translateX(4.5rem);
+  }
+
+  .crewInfo > p {
+    text-align: left;
+    margin-left: 0;
+    margin-block-start: 2.5rem;
+    font: var(--barlow-md-regular);
+    max-width: 44.4rem;
+  }
+
+  .crewInfo h2 {
+    font: var(--crew-name-desktop);
+    margin-block-start: 9.3rem;
+  }
+
+  .crewInfo h2 > p {
+    font: var(--crew-position-desktop);
+    margin-block-end: 1.7rem;
+  }
+
+  .nav {
+    margin: 0;
+    align-self: end;
   }
 }

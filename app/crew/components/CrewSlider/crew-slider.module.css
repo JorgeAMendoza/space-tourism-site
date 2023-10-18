@@ -1,6 +1,7 @@
 .slider {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.6rem;
 }
 
@@ -16,4 +17,16 @@
 
 .slider li > button[data-active='true'] {
   opacity: 1;
+}
+
+@media screen and (min-width: 1110px) {
+  .slider {
+    justify-content: flex-start;
+    gap: 2.4rem;
+  }
+
+  .slider li > button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }

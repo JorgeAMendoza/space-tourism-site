@@ -1,9 +1,6 @@
 .crew {
   composes: container from '../../styles/utils.module.css';
   width: 87%;
-
-  /* min-height: calc(100svh - 132.5px);
-  border: 1px solid red; */
 }
 
 .pageTitle {
@@ -18,5 +15,11 @@
 
   .pageTitle {
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  .crew {
+    margin-block-start: 7.5rem;
   }
 }
