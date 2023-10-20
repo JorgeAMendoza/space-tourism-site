@@ -1,6 +1,8 @@
 .tech {
   --tech-title-sub: 400 1.4rem 'Barlow Condensed', sans-serif;
+  --tech-title-sub-tablet: 400 1.6rem 'Barlow Condensed', sans-serif;
   --tech-title: 400 2.4rem 'Bellefair', sans-serif;
+  --tech-title-tablet: 400 4rem 'Bellefair', sans-serif;
 
   display: grid;
   grid-template-areas:
@@ -48,9 +50,41 @@
   text-align: center;
   color: var(--purple-text);
   font: var(--barlow-xs-regular);
+  margin: 0 auto;
   margin-block-start: 1.7rem;
+  width: min(100%, 45.5rem);
 }
 
 .nav {
   grid-area: nav;
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    height: 31rem;
+  }
+
+  .image img {
+    height: 31rem;
+    transform: translateY(-0.5rem);
+  }
+
+  .nav {
+    margin-block-start: 5rem;
+  }
+
+  .title {
+    font: var(--tech-title-tablet);
+    margin-block-start: 4.2rem;
+  }
+
+  .title p {
+    font: var(--tech-title-sub-tablet);
+    margin-block-end: 1.4rem;
+    letter-spacing: 0.27rem;
+  }
+
+  .description {
+    font: var(--barlow-sm-regular);
+  }
 }
