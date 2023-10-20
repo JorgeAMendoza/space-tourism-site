@@ -1,4 +1,5 @@
 'use client'
+import style from './tech-slider.module.css'
 
 import type { Technology } from '@/types/api'
 import { useMemo, useState } from 'react'
@@ -23,15 +24,15 @@ const TechSlider = ({ data }: TechSliderProps) => {
     <div>
       <Tech data={techData}>
         <nav aria-label="navigation for technology used for travel">
-          <ul>
+          <ul className={style.techSlider}>
             {data.map((tech, index) => (
-              <li key={tech.name}>
+              <li key={tech.name} data-active={tech.name === currentTech}>
                 <button
                   type="button"
                   aria-label={`click to navigate to ${tech.name}`}
                   onClick={() => setCurrentTech(tech.name)}
                 >
-                  {index}
+                  {index + 1}
                 </button>
               </li>
             ))}

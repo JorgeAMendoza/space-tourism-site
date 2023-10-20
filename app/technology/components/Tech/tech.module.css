@@ -1,0 +1,56 @@
+.tech {
+  --tech-title-sub: 400 1.4rem 'Barlow Condensed', sans-serif;
+  --tech-title: 400 2.4rem 'Bellefair', sans-serif;
+
+  display: grid;
+  grid-template-areas:
+    'image'
+    'nav'
+    'title'
+    'description';
+  margin-block-start: 6.3rem;
+}
+
+.title {
+  grid-area: title;
+  font: var(--tech-title);
+  text-align: center;
+  text-transform: uppercase;
+  margin-block-start: 2.4rem;
+}
+
+.title p {
+  font: var(--tech-title-sub);
+  color: var(--purple-text);
+  letter-spacing: 0.236rem;
+  margin-block-end: 0.7rem;
+}
+
+.title p span {
+  letter-spacing: 0;
+}
+
+.image {
+  grid-area: image;
+  height: 17rem;
+}
+
+.image img {
+  position: absolute;
+  left: 0;
+  transform: translateY(-3.5rem);
+  z-index: -1;
+  width: 100%;
+}
+
+.description {
+  grid-area: description;
+  text-align: center;
+  color: var(--purple-text);
+  font: var(--barlow-xs-regular);
+  margin-block-start: 1.7rem;
+}
+
+.nav {
+  grid-area: nav;
+}

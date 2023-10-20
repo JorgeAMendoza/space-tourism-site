@@ -1,0 +1,27 @@
+.techSlider {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+
+  --slider-text: 400 1.6rem 'Bellefair', sans-serif;
+}
+
+.techSlider li button {
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  color: var(--light-text);
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 50%;
+  font: var(--slider-text);
+}
+
+.techSlider li button:hover {
+  background-color: var(--white);
+  color: var(--secondary);
+}
+
+.techSlider li[data-active='true'] button {
+  background-color: var(--white);
+  color: var(--secondary);
+}
