@@ -74,6 +74,7 @@
   .image img {
     height: 31rem;
     transform: translateY(-0.5rem);
+    object-fit: contain;
   }
 
   .nav {
@@ -99,7 +100,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   .tech {
     grid-template-areas: 'nav info image';
     grid-template-columns: auto 1fr auto;
@@ -115,7 +116,7 @@
   }
 
   .image img {
-    width: 51.2rem;
+    width: 51.5rem;
     height: 52.7rem;
     right: 0;
     left: auto;
