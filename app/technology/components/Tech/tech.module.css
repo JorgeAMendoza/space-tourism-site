@@ -3,22 +3,26 @@
   --tech-title-sub-tablet: 400 1.6rem 'Barlow Condensed', sans-serif;
   --tech-title: 400 2.4rem 'Bellefair', sans-serif;
   --tech-title-tablet: 400 4rem 'Bellefair', sans-serif;
+  --tech-title-desktop: 400 5.6rem 'Bellefair', sans-serif;
 
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-areas:
     'image'
     'nav'
-    'title'
-    'description';
+    'info';
   margin-block-start: 6.3rem;
 }
 
+.techInfo {
+  grid-area: info;
+  margin-block-start: 2.4rem;
+}
+
 .title {
-  grid-area: title;
   font: var(--tech-title);
   text-align: center;
   text-transform: uppercase;
-  margin-block-start: 2.4rem;
 }
 
 .title p {
@@ -37,6 +41,10 @@
   height: 17rem;
 }
 
+.portraitImage {
+  display: none;
+}
+
 .image img {
   position: absolute;
   left: 0;
@@ -46,7 +54,6 @@
 }
 
 .description {
-  grid-area: description;
   text-align: center;
   color: var(--purple-text);
   font: var(--barlow-xs-regular);
@@ -73,9 +80,12 @@
     margin-block-start: 5rem;
   }
 
+  .techInfo {
+    margin-block-start: 4.2rem;
+  }
+
   .title {
     font: var(--tech-title-tablet);
-    margin-block-start: 4.2rem;
   }
 
   .title p {
@@ -86,5 +96,60 @@
 
   .description {
     font: var(--barlow-sm-regular);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .tech {
+    grid-template-areas: 'nav info image';
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .mobileImage {
+    display: none;
+  }
+
+  .image {
+    width: 0;
+    height: 0;
+  }
+
+  .image img {
+    width: 51.2rem;
+    height: 52.7rem;
+    right: 0;
+    left: auto;
+    transform: translateY(-4rem);
+  }
+
+  .portraitImage {
+    display: block;
+  }
+
+  .nav {
+    margin-block-start: 7rem;
+  }
+
+  .techInfo {
+    margin-left: 8rem;
+    margin-block-start: 7rem;
+  }
+
+  .title {
+    text-align: left;
+    margin: 0;
+    align-self: end;
+    font: var(--tech-title-desktop);
+  }
+
+  .title p {
+    margin-block-end: 1rem;
+  }
+
+  .description {
+    text-align: left;
+    margin: 0;
+    font: var(--barlow-md-regular);
+    margin-block-start: 1.5rem;
   }
 }
