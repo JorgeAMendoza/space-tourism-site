@@ -1,7 +1,6 @@
 import { fetchTechnologyData } from '@/services/api/technology'
 import TechSlider from './components/TechSlider/TechSlider'
 import style from './technology.module.css'
-import util from '../../styles/utils.module.css'
 
 const getData = () => {
   const data = fetchTechnologyData()
@@ -11,8 +10,8 @@ const getData = () => {
 const TechnologyPage = () => {
   const data = getData()
   return (
-    <div className={util.container}>
-      <main className={style.technology}>
+    <main className={style.technology}>
+      <div className={style.infoContainer}>
         <h1 className={style.pageTitle}>
           <p>03</p> space launch 101
         </h1>
@@ -20,8 +19,8 @@ const TechnologyPage = () => {
         <section>
           <TechSlider data={data} />
         </section>
-      </main>
-    </div>
+      </div>
+    </main>
   )
 }
 

@@ -1,25 +1,40 @@
 .technology {
-  width: 87%;
   margin: 0 auto;
+  position: relative;
 }
 
 .pageTitle {
   composes: title from '../../styles/utils/fonts.module.css';
 }
 
+.infoContainer {
+  width: 87%;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 768px) {
   .technology {
     margin-block-start: 3.8rem;
-    width: min(90%, 111rem);
   }
 
   .pageTitle {
     text-align: left;
+  }
+
+  .infoContainer {
+    width: min(89.5%, 150rem);
+    margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .technology {
     margin-block-start: 7.5rem;
+    width: min(92.5%, 145rem);
+  }
+
+  .infoContainer {
+    width: 83.2%;
+    margin: 0 auto;
   }
 }
