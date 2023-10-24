@@ -1,6 +1,6 @@
 .technology {
-  composes: container from '../../styles/utils.module.css';
   width: 87%;
+  margin: 0 auto;
 }
 
 .pageTitle {
