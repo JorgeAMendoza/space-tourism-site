@@ -17,3 +17,9 @@
     text-align: left;
   }
 }
+
+@media screen and (min-width: 1110px) {
+  .crew {
+    margin-block-start: 7.5rem;
+  }
+}

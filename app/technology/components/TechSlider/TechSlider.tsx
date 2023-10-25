@@ -1,4 +1,5 @@
 'use client'
+import style from './tech-slider.module.css'
 
 import type { Technology } from '@/types/api'
 import { useMemo, useState } from 'react'
@@ -9,6 +10,8 @@ interface TechSliderProps {
 }
 
 const TechSlider = ({ data }: TechSliderProps) => {
+  const [nextTech, setNextTech] = useState<string>('')
+  const [techSwitch, setTechSwitch] = useState<boolean>(false)
   const [currentTech, setCurrentTech] = useState(data[0].name)
 
   const techData = useMemo(() => {
@@ -21,17 +24,28 @@ const TechSlider = ({ data }: TechSliderProps) => {
   if (techData === null) return null
   return (
     <div>
-      <Tech data={techData}>
+      <Tech
+        data={techData}
+        techSwitch={techSwitch}
+        showNextTech={() => {
+          setTechSwitch(false)
+          setCurrentTech(nextTech)
+        }}
+      >
         <nav aria-label="navigation for technology used for travel">
-          <ul>
+          <ul className={style.techSlider}>
             {data.map((tech, index) => (
-              <li key={tech.name}>
+              <li key={tech.name} data-active={tech.name === currentTech}>
                 <button
                   type="button"
                   aria-label={`click to navigate to ${tech.name}`}
-                  onClick={() => setCurrentTech(tech.name)}
+                  onClick={() => {
+                    if (currentTech === tech.name) return
+                    setNextTech(tech.name)
+                    setTechSwitch(true)
+                  }}
                 >
-                  {index}
+                  {index + 1}
                 </button>
               </li>
             ))}

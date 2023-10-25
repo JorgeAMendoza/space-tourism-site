@@ -1,0 +1,50 @@
+.techSlider {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+
+  --slider-text: 400 1.6rem 'Bellefair', sans-serif;
+  --slider-text-tablet: 400 2.4rem 'Bellefair', sans-serif;
+  --slider-text-desktop: 400 3.2rem 'Bellefair', sans-serif;
+}
+
+.techSlider li button {
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  color: var(--light-text);
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 50%;
+  font: var(--slider-text);
+}
+
+.techSlider li button:hover {
+  background-color: var(--white);
+  color: var(--secondary);
+}
+
+.techSlider li[data-active='true'] button {
+  background-color: var(--white);
+  color: var(--secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .techSlider li button {
+    width: 6rem;
+    height: 6rem;
+    font: var(--slider-text-tablet);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .techSlider {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .techSlider li button {
+    width: 8rem;
+    height: 8rem;
+    font: var(--slider-text-desktop);
+  }
+}
