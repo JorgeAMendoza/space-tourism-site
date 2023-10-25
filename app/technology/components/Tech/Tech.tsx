@@ -6,13 +6,21 @@ import style from './tech.module.css'
 interface TechProps {
   data: Technology
   children: ReactNode
+  techSwitch: boolean
+  showNextTech: () => void
 }
 
-const Tech = ({ data, children }: TechProps) => {
+const Tech = ({ data, children, techSwitch, showNextTech }: TechProps) => {
   return (
-    <div className={style.tech}>
+    <div
+      className={style.tech}
+      onAnimationEnd={() => {
+        if (techSwitch === false) return
+        showNextTech()
+      }}
+    >
       <div className={style.nav}>{children}</div>
-      <div className={style.techInfo}>
+      <div className={style.techInfo} data-switch={techSwitch}>
         <h2 className={style.title}>
           <p>
             the terminology<span>...</span>
@@ -22,7 +30,7 @@ const Tech = ({ data, children }: TechProps) => {
         <p className={style.description}>{data.description}</p>
       </div>
 
-      <div className={style.image}>
+      <div className={style.image} data-switch={techSwitch}>
         <Image
           src={data.images.landscape}
           alt={data.name}

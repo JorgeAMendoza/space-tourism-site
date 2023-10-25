@@ -1,3 +1,23 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 .tech {
   --tech-title-sub: 400 1.4rem 'Barlow Condensed', sans-serif;
   --tech-title-sub-tablet: 400 1.6rem 'Barlow Condensed', sans-serif;
@@ -17,6 +37,11 @@
 .techInfo {
   grid-area: info;
   margin-block-start: 2.4rem;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.techInfo[data-switch='true'] {
+  animation: fade-out 0.5s ease-in-out forwards;
 }
 
 .title {
@@ -39,6 +64,11 @@
 .image {
   grid-area: image;
   height: 17rem;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.image[data-switch='true'] {
+  animation: fade-out 0.5s ease-in-out forwards;
 }
 
 .portraitImage {
