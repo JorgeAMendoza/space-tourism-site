@@ -19,15 +19,16 @@ const NavBar = () => {
   useEffect(() => {
     if (isMobile) {
       setShowNav(false)
-    } else {
-      setShowNav(true)
-      document.body.classList.remove('navActive')
     }
   }, [isMobile])
 
   useEffect(() => {
-    setShowNav(false)
-  }, [])
+    if (showNav) {
+      document.body.classList.add('mobileActive')
+    } else {
+      document.body.classList.remove('mobileActive')
+    }
+  })
 
   return (
     <div className={style.navbar}>
