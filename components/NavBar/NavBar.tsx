@@ -8,9 +8,11 @@ import style from './navbar.module.css'
 import { useEffect, useState } from 'react'
 import useIsMobile from '@/hooks/useIsMobile'
 import { usePathname } from 'next/navigation'
+import useClickOutside from '@/hooks/useClickOutside'
 
 const NavBar = () => {
   const [showNav, setShowNav] = useState(false)
+  const nav = useClickOutside(setShowNav)
   const isMobile = useIsMobile()
   const pathname = usePathname()
 
@@ -41,6 +43,7 @@ const NavBar = () => {
         </Link>
 
         <nav
+          ref={nav}
           aria-label="navigation for space tourism website"
           aria-hidden={showNav ? 'false' : 'true'}
           id="nav-menu-mobile"
