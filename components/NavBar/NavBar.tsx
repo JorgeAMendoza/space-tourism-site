@@ -43,6 +43,17 @@ const NavBar = () => {
           />
         </Link>
 
+        <button
+          aria-expanded={showNav}
+          aria-label="click to open the menu"
+          type="button"
+          aria-controls="nav-menu-mobile"
+          onClick={() => setShowNav(true)}
+          className={style.hamburgerMenu}
+        >
+          <Image src={menuIcon as string} alt="menu icon" />
+        </button>
+
         <nav
           ref={nav}
           aria-label="navigation for space tourism website"
@@ -110,16 +121,6 @@ const NavBar = () => {
             </li>
           </ul>
         </nav>
-
-        <button
-          aria-label="click to open the menu"
-          type="button"
-          aria-controls="nav-menu-mobile"
-          onClick={() => setShowNav(true)}
-          className={style.hamburgerMenu}
-        >
-          <Image src={menuIcon as string} alt="menu icon" />
-        </button>
       </div>
     </div>
   )
