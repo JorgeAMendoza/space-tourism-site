@@ -84,7 +84,6 @@ const NavBar = () => {
 
         <nav
           aria-label="navigation for space toursim website"
-          aria-hidden={showNav ? 'false' : 'true'}
           id="nav-menu"
           className={style.navMenu}
         >
@@ -117,7 +116,6 @@ const NavBar = () => {
           type="button"
           aria-controls="nav-menu-mobile"
           onClick={() => setShowNav(true)}
-          aria-hidden={showNav ? 'true' : 'false'}
           className={style.hamburgerMenu}
         >
           <Image src={menuIcon as string} alt="menu icon" />
