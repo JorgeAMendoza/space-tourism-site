@@ -44,7 +44,7 @@ const PlanetSlider = ({ destinations }: PlanetSliderProps) => {
         <nav>
           <ul className={style.planetNavigation}>
             {destinations.map((dest) => (
-              <li key={dest.name}>
+              <li key={dest.name} data-active={dest.name === destination}>
                 <button
                   type="button"
                   onClick={() => {
