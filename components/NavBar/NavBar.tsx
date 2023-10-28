@@ -30,6 +30,10 @@ const NavBar = () => {
     }
   })
 
+  useEffect(() => {
+    setShowNav(false)
+  }, [pathname])
+
   return (
     <div className={style.navbar}>
       <div className={style.navContainer}>
