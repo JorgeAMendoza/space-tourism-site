@@ -71,7 +71,7 @@
 
 .explore:hover::before,
 .explore:focus-within::before {
-  transform: scale(3);
+  transform: scale(1.5);
 }
 
 @media screen and (min-width: 768px) {
@@ -99,6 +99,11 @@
     width: 24.2rem;
     height: 24.2rem;
     font-size: 3.2rem;
+  }
+
+  .explore:hover::before,
+  .explore:focus-within::before {
+    transform: scale(2);
   }
 }
 
@@ -136,5 +141,10 @@
     width: 27.4rem;
     height: 27.4rem;
     align-self: end;
+  }
+
+  .explore:hover::before,
+  .explore:focus-within::before {
+    transform: scale(3);
   }
 }
