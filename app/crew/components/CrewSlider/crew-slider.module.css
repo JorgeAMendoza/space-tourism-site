@@ -1,0 +1,32 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.slider li > button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  opacity: 0.17;
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.slider li > button[data-active='true'] {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1110px) {
+  .slider {
+    justify-content: flex-start;
+    gap: 2.4rem;
+  }
+
+  .slider li > button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

@@ -1,0 +1,48 @@
+/* text */
+
+/* heading */
+.heading-m {
+  font-size: 5.6rem;
+  line-height: 1.3;
+}
+
+.title {
+  font: var(--info-page-title);
+  color: var(--light-text);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.27rem;
+}
+
+.title p {
+  display: inline-block;
+  opacity: 0.4;
+  margin-right: 0.9rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .heading-m {
+    font-size: 8rem;
+  }
+
+  .title {
+    font: var(--info-page-title-tablet);
+    letter-spacing: 0.338rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .title {
+    font: var(--info-page-title-desktop);
+    letter-spacing: 0.472rem;
+  }
+
+  .title p {
+    margin-right: 1.6rem;
+  }
+
+  .heading-m {
+    font-size: 10rem;
+  }
+}

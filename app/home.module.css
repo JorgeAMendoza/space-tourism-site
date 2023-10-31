@@ -1,0 +1,150 @@
+.home {
+  composes: container from '../styles/utils.module.css';
+  text-align: center;
+  margin-block-start: 2.6rem;
+  z-index: 1;
+}
+
+.homeContent h1 {
+  font: var(--barlow-cond-subtitle-sm-regular);
+  line-height: 1.187;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.27rem;
+}
+
+.homeContent h1 > span {
+  font: var(--bellefair-title-lg);
+  display: block;
+  color: var(--light-text);
+  letter-spacing: normal;
+  margin-block-start: 0.8rem;
+}
+
+.homeContent p {
+  font: var(--barlow-xs-regular);
+  color: var(--primary);
+  margin: 0 auto;
+  margin-block-start: 1rem;
+  width: min(100%, 44.5rem);
+}
+
+.explore {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  font:
+    400 2rem Bellefair,
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  margin-block-start: 7.8rem;
+  background-color: var(--white);
+}
+
+.explore a {
+  color: var(--secondary);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore::before {
+  content: '';
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-color: rgba(255 255 255 / 10%);
+  transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  z-index: -2;
+}
+
+.explore:hover::before,
+.explore:focus-within::before {
+  transform: scale(1.5);
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    margin-block-start: 10.7rem;
+  }
+
+  .homeContent h1 {
+    letter-spacing: 0.338rem;
+    font: var(--barlow-cond-subtitle-md-regular);
+  }
+
+  .homeContent h1 > span {
+    font: var(--bellefair-title-xxl);
+    margin-block-start: 1.5rem;
+  }
+
+  .homeContent p {
+    font: var(--barlow-sm-regular);
+    margin-block-start: 1rem;
+  }
+
+  .explore {
+    margin-block-start: 15.5rem;
+    width: 24.2rem;
+    height: 24.2rem;
+    font-size: 3.2rem;
+  }
+
+  .explore:hover::before,
+  .explore:focus-within::before {
+    transform: scale(2);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    padding: 0 11rem;
+    margin-block-start: 25.5rem;
+    display: grid;
+    text-align: left;
+    grid-template-areas:
+      'title button'
+      'text button';
+  }
+
+  .homeContent h1 {
+    grid-area: title;
+    font: var(--barlow-cond-subtitle-lg-regular);
+    letter-spacing: 4.72px;
+  }
+
+  .homeContent h1 > span {
+    margin-block-start: 2.5rem;
+  }
+
+  .homeContent p {
+    font: var(--barlow-md-regular);
+    grid-area: text;
+    margin: 0;
+    margin-block-start: 2.5rem;
+  }
+
+  .explore {
+    margin-block-start: 0;
+    grid-area: button;
+    width: 27.4rem;
+    height: 27.4rem;
+    align-self: end;
+  }
+
+  .explore:hover::before,
+  .explore:focus-within::before {
+    transform: scale(3);
+  }
+}

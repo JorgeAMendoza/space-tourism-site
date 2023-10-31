@@ -1,0 +1,25 @@
+.destinations {
+  composes: container from '../../styles/utils.module.css';
+  width: 87%;
+}
+
+.pageTitle {
+  composes: title from '../../styles/utils/fonts.module.css';
+}
+
+@media screen and (min-width: 768px) {
+  .destinations {
+    margin-block-start: 3.8rem;
+    width: min(90%, 111rem);
+  }
+
+  .pageTitle {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .destinations {
+    margin-block-start: 7.5rem;
+  }
+}

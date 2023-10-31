@@ -1,0 +1,55 @@
+.planetNavigation {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  min-height: 2.8rem;
+
+  /* fonts */
+  --nav-item: 400 1.4rem 'Barlow Condensed', sans-serif;
+  --nav-item-tablet: 400 1.6rem 'Barlow Condensed', sans-serif;
+}
+
+.planetNavigation li {
+  position: relative;
+}
+
+.planetNavigation li > button {
+  font: var(--nav-item);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.236rem;
+  color: var(--purple-text);
+}
+
+.planetNavigation li::after {
+  position: absolute;
+  content: '';
+  width: 99%;
+  height: 3px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #fff;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.planetNavigation li[data-active='true']::after {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .planetNavigation {
+    gap: 3.5rem;
+  }
+
+  .planetNavigation li > button {
+    font: var(--nav-item-tablet);
+    letter-spacing: 0.27rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .planetNavigation {
+    justify-content: flex-start;
+  }
+}
