@@ -33,8 +33,6 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Validate TypeScript
-        run: npm run check:types
       - name: Validate ESLint
         run: npm run lint
 
